@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/one-to-one-inverse', function (){
+    return App\Profile::find(2)->user;
+});
+
+Route::get('users/{userId}/articles', 'ArticleUserController@index');
