@@ -16,6 +16,7 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\UserRegistered' => [
             'App\Listeners\SendActivationCode',
             'App\Listeners\AssignRole',
+            'App\Listeners\CreateProfile'
         ],
     ];
 

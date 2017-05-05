@@ -8,6 +8,8 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
+                    <p>{{ Auth::user()->profile->city }}</p>
+                    <p>{{ Auth::user()->profile->about }}</p>
                     You are logged in!
                 </div>
             </div>

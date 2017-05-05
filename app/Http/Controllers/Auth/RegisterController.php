@@ -71,11 +71,8 @@ class RegisterController extends Controller
 
         // To fire user registerd Event
 
-        event(new UserRegistered($user));
-
-
-
-        return $user;
+          event(new UserRegistered($user));
+          return $user;
     }
 
 }
