@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 class ArticleUserController extends Controller
 {
     //
-    public function  index($userId)
+    public function  show($userId)
     {
        $articles = User::find($userId)->articles;
-       return view('articles.index',compact('articles'));
+       return view('articles.show',compact('articles'));
     }
 }

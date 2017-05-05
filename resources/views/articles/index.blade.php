@@ -9,15 +9,19 @@
 
                     <div class="panel-body">
 
-                          <div class="list-group">
-                              @foreach($articles as $article)
-                                 <div class="list-group-item">
-                                     <h4 class="list-group-item-heading"> {{ $article->title }}</h4>
-                                     <p class="list-group-item-text">     {{ $article->body }}</p>
-                                 </div>
+                        <div class="list-group">
+                            @foreach($articles as $article)
+                                <div class="list-group-item">
+                                    <h4 class="list-group-item-heading">
+                                        <p> {{ $article->title }} </p>
 
-                              @endforeach
-                          </div>
+                                        <p style="color: red"> By ({{ $article->owner ->name}})</p>
+                                    </h4>
+                                    <p class="list-group-item-text"> {{ $article->body }}</p>
+                                </div>
+
+                            @endforeach
+                        </div>
                     </div>
                 </div>
             </div>

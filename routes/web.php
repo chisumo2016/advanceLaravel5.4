@@ -23,4 +23,6 @@ Route::get('/one-to-one-inverse', function (){
     return App\Profile::find(2)->user;
 });
 
-Route::get('users/{userId}/articles', 'ArticleUserController@index');
+Route::get('users/{userId}/articles', 'ArticleUserController@show');
+
+Route::get('articles', 'ArticlesController@index');
